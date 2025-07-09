@@ -1,0 +1,85 @@
+# Ambiente virtual (ex: venv, env, .env)
+env/
+venv/
+.venv/
+ENV/
+*.py[cod]
+__pycache__/
+*.so
+
+# Arquivos de configuração locais e sensíveis
+*.env
+*.env.*
+.secret
+*.sqlite3
+db.sqlite3
+
+# Arquivos temporários do sistema e do editor
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*~
+
+# PyCharm / VSCode / JetBrains / Thonny
+.idea/
+.vscode/
+*.code-workspace
+*.mypy_cache/
+.dmypy.json
+.pyre/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos do pip e compilação
+pip-log.txt
+pip-delete-this-directory.txt
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Test coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+test_results/
+
+# Django static/media
+staticfiles/
+static/
+media/
+
+# Arquivos de banco de dados de dev
+*.sqlite3
+
+# Arquivos do Windows
+ehthumbs.db
+Icon?
+Desktop.ini

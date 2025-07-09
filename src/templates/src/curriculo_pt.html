@@ -1,0 +1,49 @@
+{% extends "src/index.html" %}
+{% block content %}
+<main>
+    <h1>Tiago Enriquez Tachy</h1>
+    <h2>Contato</h2>
+    <table>
+        <tbody>
+            {% for contato in contatos %}
+            <tr>
+                <td>{{ contato.chave_em_portugues }}:</td>
+                <td>{{ contato.valor }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <h2>Principais competências</h2>
+    <table>
+        <tbody>
+            {% for competencia in competencias %}
+            <tr>
+                <td>{{ competencia.nome }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <h2>Resumo</h2>
+    <p>{{ resumo.em_portugues }}</p>
+    <br>
+    <h2>Experiência</h2>
+    {% for experiencia in experiencias %}
+    <table class="experiencia">
+        <tbody>
+            <tr>
+                <td>{{ experiencia.empresa }},</td>
+            </tr>
+            <tr>
+                <td>como {{ experiencia.cargo_em_portugues }}</td>
+            </tr>
+            <tr>
+                <td>de {{ experiencia.inicio }} a {{ experiencia.fim }}</td>
+            </tr>
+        </tbody>
+    </table>
+    {% endfor %}
+</main>
+{% endblock %}
+

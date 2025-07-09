@@ -1,0 +1,21 @@
+{% extends "src/index.html" %}
+{% block content %}
+<main>
+    <h1>Perguntas inciais</h1>
+    <form action="#" method="post">
+        {% csrf_token %}
+        <div class="row">
+            <label for="n_competencias">Nº de competências</label>
+            <input type="number" name="n_competencias" id="n_competencias" />
+        </div>
+        <div class="row">
+            <label for="idioma">Idioma</label>
+            <select name="idioma" id="idioma">
+                <option value="portugues">Português</option>
+                <option value="inglês">Inglês</option>
+            </select>
+        </div>
+        <button type="submit">Mostrar currículo</button>
+    </form>
+</main>
+{% endblock %}
