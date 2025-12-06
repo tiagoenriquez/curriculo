@@ -1,0 +1,9 @@
+<script>
+    function imprimir() {
+        const button = document.getElementById('imprimir')
+        const parent = button.parentElement
+        parent.removeChild(button)
+        window.print()
+        parent.appendChild(button)
+    }
+</script>
