@@ -23,6 +23,18 @@ Depois, é preciso entrar no ambiente virtual, digitando o comando que varia a d
 source venv/bin/activate
 ```
 
+Em seguida, é preciso instalar as dependências, com o comando:
+
+```
+pip install -r requirements.txt
+```
+
+Então, é necessário rodar as migrações, com:
+
+```
+python manage.py migrate
+```
+
 Depois, é possível fazer o sistema funcionar, com o comando:
 
 ```
