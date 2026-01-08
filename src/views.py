@@ -12,10 +12,17 @@ def perguntar(request: HttpRequest):
         idioma = request.POST.get("idioma")
         contatos = Contato.objects.all()
         competencias = Competencia.objects.all()[:n_competencias]
-        resumo = Resumo.objects.first()
+        resumos = Resumo.objects.first()
+        resumo_pt = resumos.em_portugues.split('\n')
+        resumo_en = resumos.em_ingles.split('\n')
         experiencias = Experiencia.objects.all()
         template = "src/curriculo_pt.html" if idioma == "portugues" else "src/curriculo_en.html"
-        context = {"contatos": contatos, "competencias": competencias, "resumo": resumo, "experiencias": experiencias}
+        context = {
+            "contatos": contatos,
+            "competencias": competencias,
+            "resumo": resumo_pt if idioma == "portugues" else resumo_en,
+            "experiencias": experiencias
+        }
         return render(request, template, context)
     else:
         return HttpResponse("<h1>Método inválido</h1>", status=405)

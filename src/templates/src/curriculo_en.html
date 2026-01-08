@@ -26,7 +26,9 @@
     </table>
     <br>
     <h2>Summary</h2>
-    <p>{{ resumo.em_ingles }}</p>
+    {% for paragrafo in resumo %}
+    <p>{{ paragrafo }}</p>
+    {% endfor %}
     <br>
     <h2>Experience</h2>
     {% for experiencia in experiencias %}
